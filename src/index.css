@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-bg-primary: #0A1929;
+  --color-bg-secondary: #132f4c;
+  --color-text-primary: #E5E7EB;
+  --color-text-secondary: #9CA3AF;
+  --color-accent-bullish: #10B981;
+  --color-accent-bearish: #EF4444;
+  --color-accent-neutral: #6366F1;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+    'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Signal status colors */
+.signal-bullish {
+  color: var(--color-accent-bullish);
+}
+
+.signal-bearish {
+  color: var(--color-accent-bearish);
+}
+
+.signal-neutral {
+  color: var(--color-accent-neutral);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--color-accent-neutral);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D3748;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A5568;
+}
